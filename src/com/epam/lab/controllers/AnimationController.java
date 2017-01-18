@@ -20,9 +20,16 @@ public class AnimationController extends TimerTask {
                 System.err.println("Animation mode error");
         }
         player.setScore(player.getScore()+1);
+        increaseLevel();
     }
 
     public static int getEnemy(){
         return 90 + random.nextInt(100);
+    }
+
+    public void increaseLevel(){
+        if(player.getScore()>2000){
+            player.setLevel(2);
+        }
     }
 }

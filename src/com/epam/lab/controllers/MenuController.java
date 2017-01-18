@@ -48,7 +48,16 @@ public class MenuController {
     private static void initPlayer(){
         Animation.inputingPlayerName();
         String playerName = scanner.nextLine();
-        Player.createPlayer(playerName);
+        Animation.showChoosingDroid();
+        String droidType;
+        switch(scanner.nextLine()){
+            case "1": droidType = "bullet_droid";break;
+            case "2": droidType = "rocket_droid";break;
+            default:
+                System.err.println("Input error");
+                droidType = "bullet_droid";
+        }
+        Player.createPlayer(playerName,droidType);
     }
 
     private static void initSavedPlayer(){

@@ -24,9 +24,9 @@ public class Player implements Serializable{
 
     private Player(){}
 
-    public static Player createPlayer(String droidName){
+    public static Player createPlayer(String droidName,String droidType){
         if(instance==null){
-            instance = new Player(droidName,1,0,0,"bullet_droid");
+            instance = new Player(droidName,1,0,0,droidType);
             return instance;
         }
         return instance;
