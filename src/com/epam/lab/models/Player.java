@@ -31,14 +31,6 @@ public class Player implements Serializable{
         }
         return instance;
     }
-//
-//    public static Player createPlayer(String playerName,int level,int score,int kills,String droidType){
-//        if(instance==null){
-//            instance = new Player(playerName, level,score,kills,droidType);
-//            return instance;
-//        }
-//        return instance;
-//    }
 
     public void initDroid(String droidType){
         switch (droidType){

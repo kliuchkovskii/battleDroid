@@ -11,7 +11,6 @@ public class SaverController {
         try {
             FileOutputStream fos = new FileOutputStream("temp.out");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
-            //Player player = Player.getPlayer();
             oos.writeObject(player);
             oos.flush();
             oos.close();

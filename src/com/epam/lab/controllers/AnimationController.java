@@ -2,10 +2,7 @@ package com.epam.lab.controllers;
 
 
 import com.epam.lab.models.Player;
-import com.epam.lab.view.Animation;
 
-import java.io.IOException;
-import java.io.InterruptedIOException;
 import java.util.Random;
 import java.util.TimerTask;
 

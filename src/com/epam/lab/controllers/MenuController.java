@@ -38,9 +38,7 @@ public class MenuController {
     }
 
     private static void startSavedGame(){
-        Player.setPlayer(new SaverController().readPlayer());
-        Player player = Player.getPlayer();
-        player.initDroid(player.getDroidType());
+        initSavedPlayer();
         Thread thread = new Thread(new MyListener());
         thread.start();
         Timer timer = new Timer();
@@ -51,5 +49,11 @@ public class MenuController {
         Animation.inputingPlayerName();
         String playerName = scanner.nextLine();
         Player.createPlayer(playerName);
+    }
+
+    private static void initSavedPlayer(){
+        Player.setPlayer(new SaverController().readPlayer());
+        Player player = Player.getPlayer();
+        player.initDroid(player.getDroidType());
     }
 }
